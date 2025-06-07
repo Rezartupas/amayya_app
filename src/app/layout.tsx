@@ -2,6 +2,14 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '700'],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Amàyyà Tour - Paket Umrah Terbaik',
@@ -14,11 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" className={montserrat.variable}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet" />
+        {/* Google Fonts are now handled by next/font */}
       </head>
       <body className="font-body antialiased font-light">
         <TooltipProvider>
