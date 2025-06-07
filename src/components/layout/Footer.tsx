@@ -1,6 +1,7 @@
 // src/components/layout/Footer.tsx
 import Link from 'next/link';
-import { Facebook, Instagram, Youtube, Mail, Phone, MapPin, Compass } from 'lucide-react';
+import Image from 'next/image';
+import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Compass className="h-8 w-8 text-accent" />
+              <Image 
+                src="https://placehold.co/40x40.png" 
+                alt="Amàyyà Tour Logo" 
+                data-ai-hint="logo compass"
+                width={32} 
+                height={32} 
+                className="text-accent" 
+              />
               <span className="font-headline font-bold text-2xl">Amàyyà Tour</span>
             </Link>
             <p className="text-sm text-primary-foreground/80">

@@ -2,8 +2,9 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
-import { Menu, X, Compass } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 
@@ -23,7 +24,14 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex items-center justify-between h-16 max-w-screen-2xl">
         <Link href="/" className="flex items-center space-x-2 text-primary hover:text-accent transition-colors">
-          <Compass className="h-7 w-7 text-accent" />
+          <Image 
+            src="https://placehold.co/40x40.png" 
+            alt="Amàyyà Tour Logo" 
+            data-ai-hint="logo compass"
+            width={28} 
+            height={28} 
+            className="text-accent" 
+          />
           <span className="font-headline font-bold text-xl">Amàyyà Tour</span>
         </Link>
 
@@ -50,7 +58,14 @@ export function Header() {
             <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
               <div className="flex flex-col space-y-6">
                 <Link href="/" className="flex items-center space-x-2 text-primary" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Compass className="h-7 w-7 text-accent" />
+                  <Image 
+                    src="https://placehold.co/40x40.png" 
+                    alt="Amàyyà Tour Logo" 
+                    data-ai-hint="logo compass"
+                    width={28} 
+                    height={28} 
+                    className="text-accent" 
+                  />
                   <span className="font-headline font-bold text-xl">Amàyyà Tour</span>
                 </Link>
                 <nav className="flex flex-col space-y-4">
