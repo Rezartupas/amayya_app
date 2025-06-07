@@ -1,4 +1,5 @@
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/umrah-travel-assistant.ts';
+// Removed import for '@/ai/flows/umrah-travel-assistant.ts'; as it's being deleted.
+// If you add new flows, import them here.

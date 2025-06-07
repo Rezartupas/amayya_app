@@ -1,7 +1,6 @@
 // src/app/page.tsx
-"use client"; // Required for useState hook for AI Assistant Dialog
+"use client"; // Required for useState hook for AI Assistant Dialog (now WhatsApp button)
 
-import { useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/sections/HeroSection';
@@ -10,11 +9,17 @@ import { TestimonialSection } from '@/components/sections/TestimonialSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { FaqSection } from '@/components/sections/FaqSection';
 import { ContactSection } from '@/components/sections/ContactSection';
-import { AiAssistantButton } from '@/components/AiAssistantButton';
-import { AiAssistantDialog } from '@/components/AiAssistantDialog';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export default function Home() {
-  const [isAiAssistantOpen, setIsAiAssistantOpen] = useState(false);
+  // Placeholder phone number for WhatsApp, replace with actual number
+  const whatsAppNumber = "6281234567890"; // Example: Indonesian number
+  const whatsAppMessage = "Assalamualaikum, saya tertarik dengan paket Umrah Amàyyà Tour.";
+
+  const handleWhatsAppClick = () => {
+    const url = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(whatsAppMessage)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -28,8 +33,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
-      <AiAssistantButton onClick={() => setIsAiAssistantOpen(true)} />
-      <AiAssistantDialog isOpen={isAiAssistantOpen} onOpenChange={setIsAiAssistantOpen} />
+      <WhatsAppButton onClick={handleWhatsAppClick} />
     </div>
   );
 }
