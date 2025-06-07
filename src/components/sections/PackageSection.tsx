@@ -1,12 +1,19 @@
 // src/components/sections/PackageSection.tsx
+"use client";
+
 import Image from 'next/image';
 import { umrahPackages } from '@/lib/placeholder-data';
 import type { UmrahPackage } from '@/lib/types';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { CalendarDays, DollarSign, CheckCircle2, Package as PackageIcon } from 'lucide-react';
+import { CalendarDays, DollarSign, CheckCircle2 } from 'lucide-react'; // Removed PackageIcon as it's not used
 
-function PackageCard({ pkg }: { pkg: UmrahPackage }) {
+interface PackageCardProps {
+  pkg: UmrahPackage;
+  onBookViaWhatsApp: (packageName: string) => void;
+}
+
+function PackageCard({ pkg, onBookViaWhatsApp }: PackageCardProps) {
   return (
     <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       <CardHeader className="p-0">
@@ -42,15 +49,30 @@ function PackageCard({ pkg }: { pkg: UmrahPackage }) {
         </div>
       </CardContent>
       <CardFooter className="p-6 bg-muted/30">
-        <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-          Pesan Sekarang
+        <Button 
+          className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+          onClick={() => onBookViaWhatsApp(pkg.name)}
+        >
+          Tanya/Daftar via WhatsApp
         </Button>
       </CardFooter>
     </Card>
   );
 }
 
-export function PackageSection() {
+interface PackageSectionProps {
+  whatsAppNumber: string;
+}
+
+export function PackageSection({ whatsAppNumber }: PackageSectionProps) {
+  const handleBookPackageViaWhatsApp = (packageName: string) => {
+    const message = `Assalamualaikum, saya tertarik dengan paket "${packageName}". Mohon info lebih lanjut dan cara pendaftarannya.`;
+    const url = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(message)}`;
+    if (typeof window !== "undefined") {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <section id="paket" className="py-16 lg:py-24 bg-secondary/30">
       <div className="container max-w-screen-xl">
@@ -62,7 +84,7 @@ export function PackageSection() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {umrahPackages.map((pkg) => (
-            <PackageCard key={pkg.id} pkg={pkg} />
+            <PackageCard key={pkg.id} pkg={pkg} onBookViaWhatsApp={handleBookPackageViaWhatsApp} />
           ))}
         </div>
       </div>

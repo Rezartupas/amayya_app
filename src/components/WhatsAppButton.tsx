@@ -37,7 +37,7 @@ export function WhatsAppButton({ onClick }: WhatsAppButtonProps) {
         </Button>
       </TooltipTrigger>
       <TooltipContent side="left" className="bg-primary text-primary-foreground">
-        <p>Chat via WhatsApp</p>
+        <p>Konsultasi Gratis & Info Daftar</p>
       </TooltipContent>
     </Tooltip>
   );

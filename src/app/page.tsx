@@ -14,10 +14,10 @@ import { WhatsAppButton } from '@/components/WhatsAppButton';
 export default function Home() {
   // Placeholder phone number for WhatsApp, replace with actual number
   const whatsAppNumber = "6281234567890"; // Example: Indonesian number
-  const whatsAppMessage = "Assalamualaikum, saya tertarik dengan paket Umrah Amàyyà Tour.";
+  const genericWhatsAppMessage = "Assalamualaikum, saya ingin konsultasi gratis dan mendapatkan info pendaftaran untuk paket Umrah Amàyyà Tour.";
 
-  const handleWhatsAppClick = () => {
-    const url = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(whatsAppMessage)}`;
+  const handleGenericWhatsAppClick = () => {
+    const url = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(genericWhatsAppMessage)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
@@ -26,14 +26,14 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <HeroSection />
-        <PackageSection />
+        <PackageSection whatsAppNumber={whatsAppNumber} />
         <TestimonialSection />
         <AboutSection />
         <FaqSection />
         <ContactSection />
       </main>
       <Footer />
-      <WhatsAppButton onClick={handleWhatsAppClick} />
+      <WhatsAppButton onClick={handleGenericWhatsAppClick} />
     </div>
   );
 }
