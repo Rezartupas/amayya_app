@@ -8,9 +8,8 @@ export function HeroSection() {
     <section id="hero" className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center text-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="https://images.unsplash.com/photo-1633546707050-88e2b545831c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWtrYWh8ZW58MHx8fHwxNzQ5MzExOTAzfDA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Masjidil Haram Mekkah"
-          data-ai-hint="kaaba mecca"
           fill
           priority
           className="object-cover"
