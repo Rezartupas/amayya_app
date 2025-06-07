@@ -51,7 +51,7 @@ export function Footer() {
               <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook Amàyyà Tour" className="text-primary-foreground/80 hover:text-accent transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram Amàyyà Tour" className="text-primary-foreground/80 hover:text-accent transition-colors">
+              <a href="https://www.instagram.com/amayyatour.id/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Amàyyà Tour" className="text-primary-foreground/80 hover:text-accent transition-colors">
                 <Instagram className="h-6 w-6" />
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Youtube Amàyyà Tour" className="text-primary-foreground/80 hover:text-accent transition-colors">
