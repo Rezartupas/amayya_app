@@ -13,7 +13,7 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image 
-                src="https://placehold.co/40x40.png" 
+                src="./images/amayya.svg" 
                 alt="Amàyyà Tour Logo" 
                 data-ai-hint="logo compass"
                 width={32} 

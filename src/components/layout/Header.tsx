@@ -25,7 +25,7 @@ export function Header() {
       <div className="container flex items-center justify-between h-16 max-w-screen-2xl">
         <Link href="/" className="flex items-center space-x-2 text-primary hover:text-accent transition-colors">
           <Image 
-            src="https://placehold.co/40x40.png" 
+            src="./images/amayya.svg" 
             alt="Amàyyà Tour Logo" 
             data-ai-hint="logo compass"
             width={28} 
@@ -59,7 +59,7 @@ export function Header() {
               <div className="flex flex-col space-y-6">
                 <Link href="/" className="flex items-center space-x-2 text-primary" onClick={() => setIsMobileMenuOpen(false)}>
                   <Image 
-                    src="https://placehold.co/40x40.png" 
+                    src="./images/amayya.svg" 
                     alt="Amàyyà Tour Logo" 
                     data-ai-hint="logo compass"
                     width={28} 
