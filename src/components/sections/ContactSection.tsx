@@ -125,19 +125,19 @@ export function ContactSection() {
                   <MapPin className="h-5 w-5 mr-3 mt-1 text-accent flex-shrink-0" />
                   <div>
                     <span className="font-medium text-foreground">Alamat Kantor:</span><br />
-                    Jl. Kebenaran No. 1, Jakarta Pusat, 10110, Indonesia
+                    Jl. Lodaya No.11 A, Malabar, Kec. Lengkong, Kota Bandung, Jawa Barat 40232
                   </div>
                 </li>
                 <li className="flex items-center">
                   <Phone className="h-5 w-5 mr-3 text-accent flex-shrink-0" />
                   <div>
-                    <span className="font-medium text-foreground">Telepon:</span> <a href="tel:+62211234567" className="hover:text-accent transition-colors">+62 21 1234 567</a>
+                    <span className="font-medium text-foreground">Telepon:</span> <a href="https://wa.me/6281319463463" className="hover:text-accent transition-colors">+62 813 1946 3463</a>
                   </div>
                 </li>
                 <li className="flex items-center">
                   <Mail className="h-5 w-5 mr-3 text-accent flex-shrink-0" />
                   <div>
-                    <span className="font-medium text-foreground">Email:</span> <a href="mailto:info@amayyatour.com" className="hover:text-accent transition-colors">info@amayyatour.com</a>
+                    <span className="font-medium text-foreground">Email:</span> <a href="mailto:amayyatour@gmail.com" className="hover:text-accent transition-colors">amayyatour@gmail.com</a>
                   </div>
                 </li>
               </ul>
