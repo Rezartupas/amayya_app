@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 
 const navItems = [
   { label: 'Beranda', href: '#hero' },
@@ -56,32 +56,35 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
-              <div className="flex flex-col space-y-6">
-                <Link href="/" className="flex items-center space-x-2 text-primary" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Image 
-                    src="./images/amayya.svg" 
-                    alt="Amàyyà Tour Logo" 
-                    data-ai-hint="logo compass"
-                    width={28} 
-                    height={28} 
-                    className="text-accent" 
-                  />
-                  <span className="font-headline font-bold text-xl">amàyyà tour</span>
-                </Link>
-                <nav className="flex flex-col space-y-4">
-                  {navItems.map((item) => (
-                     <SheetClose asChild key={item.label}>
-                        <Link
-                        href={item.href}
-                        className="text-lg font-medium text-foreground hover:text-accent transition-colors"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                        {item.label}
-                        </Link>
-                    </SheetClose>
-                  ))}
-                </nav>
-              </div>
+              <SheetHeader className="mb-6">
+                <SheetTitle className="text-left">
+                  <Link href="/" className="flex items-center space-x-2 text-primary" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Image 
+                      src="./images/amayya.svg" 
+                      alt="Amàyyà Tour Logo" 
+                      data-ai-hint="logo compass"
+                      width={28} 
+                      height={28} 
+                      className="text-accent" 
+                    />
+                    <span className="font-headline font-bold text-xl">amàyyà tour</span>
+                  </Link>
+                </SheetTitle>
+                {/* You can add a SheetDescription here if needed */}
+              </SheetHeader>
+              <nav className="flex flex-col space-y-4">
+                {navItems.map((item) => (
+                   <SheetClose asChild key={item.label}>
+                      <Link
+                      href={item.href}
+                      className="text-lg font-medium text-foreground hover:text-accent transition-colors py-2 block"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                      {item.label}
+                      </Link>
+                  </SheetClose>
+                ))}
+              </nav>
             </SheetContent>
           </Sheet>
         </div>
