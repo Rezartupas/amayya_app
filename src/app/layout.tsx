@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Amàyyà Tour - Paket Umrah Terbaik',
+  title: 'amàyyà tour - Namanya Umroh Pasti amàyyà!',
   description: 'Temukan paket Umrah terbaik dengan layanan profesional dari Amàyyà Tour. Kami siap melayani perjalanan ibadah Anda.',
 };
 

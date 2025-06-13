@@ -1,5 +1,5 @@
 // src/app/page.tsx
-"use client"; // Required for useState hook for AI Assistant Dialog (now WhatsApp button)
+"use client"; 
 
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -13,8 +13,8 @@ import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export default function Home() {
   // Placeholder phone number for WhatsApp, replace with actual number
-  const whatsAppNumber = "6281234567890"; // Example: Indonesian number
-  const genericWhatsAppMessage = "Assalamualaikum, saya ingin konsultasi gratis dan mendapatkan info pendaftaran untuk paket Umrah Amàyyà Tour.";
+  const whatsAppNumber = "6281319463463"; // Example: Indonesian number
+  const genericWhatsAppMessage = "Assalamualaikum, saya ingin konsultasi gratis dan mendapatkan info pendaftaran untuk paket Umrah amàyyà tour.";
 
   const handleGenericWhatsAppClick = () => {
     const url = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(genericWhatsAppMessage)}`;

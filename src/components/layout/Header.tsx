@@ -32,7 +32,7 @@ export function Header() {
             height={28} 
             className="text-accent" 
           />
-          <span className="font-headline font-bold text-xl">Amàyyà Tour</span>
+          <span className="font-headline font-bold text-xl">amàyyà tour</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
@@ -66,7 +66,7 @@ export function Header() {
                     height={28} 
                     className="text-accent" 
                   />
-                  <span className="font-headline font-bold text-xl">Amàyyà Tour</span>
+                  <span className="font-headline font-bold text-xl">amàyyà tour</span>
                 </Link>
                 <nav className="flex flex-col space-y-4">
                   {navItems.map((item) => (
