@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-
-# For better SEO, consider generating a sitemap.xml and uncommenting the line below,
-# replacing https://www.yourdomain.com with your actual domain.
-# Sitemap: https://www.yourdomain.com/sitemap.xml
