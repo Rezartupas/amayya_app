@@ -23,3 +23,10 @@ export interface FaqItem {
   question: string;
   answer: string;
 }
+
+export interface CertificateInfo {
+  id: string;
+  label: string;
+  imageSrc: string; 
+  imageAlt: string;
+}

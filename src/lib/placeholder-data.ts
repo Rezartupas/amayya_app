@@ -1,4 +1,4 @@
-import type { UmrahPackage, Testimonial, FaqItem } from './types';
+import type { UmrahPackage, Testimonial, FaqItem, CertificateInfo } from './types';
 
 export const umrahPackages: UmrahPackage[] = [
   {
@@ -121,5 +121,26 @@ export const faqItems: FaqItem[] = [
     id: '4',
     question: 'Bagaimana cara pembayaran paket Umrah?',
     answer: 'Kami menerima pembayaran melalui transfer bank. Pembayaran dapat dilakukan secara bertahap sesuai dengan ketentuan yang berlaku. Informasi detail akan kami sampaikan saat pendaftaran.',
+  },
+];
+
+export const certificates: CertificateInfo[] = [
+  {
+    id: 'ppiu',
+    label: 'PPIU Kemenag',
+    imageSrc: '/images/legalitas/ppiu.svg', 
+    imageAlt: 'Sertifikat Izin PPIU Kemenag Amàyyà Tour',
+  },
+  {
+    id: 'akreditasi',
+    label: 'Akreditasi Travel',
+    imageSrc: '/images/legalitas/akreditasi.svg', 
+    imageAlt: 'Sertifikat Akreditasi Travel Amàyyà Tour',
+  },
+  {
+    id: 'amphuri',
+    label: 'Keanggotaan AMPHURI',
+    imageSrc: '/images/legalitas/amphuri.svg', 
+    imageAlt: 'Sertifikat Keanggotaan AMPHURI Amàyyà Tour',
   },
 ];
